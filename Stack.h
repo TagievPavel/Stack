@@ -162,7 +162,6 @@ inline Stack<Type>::operator bool() const noexcept
 template<typename Type>
 inline Stack<Type>& Stack<Type>::operator=(Stack<Type>&& other) noexcept
 {
-	//TODO: переместить этот код в коструктор перемещения.
 	if (this == &other) return *this;
 
 	_top  = std::move(other._top);
@@ -175,7 +174,6 @@ inline Stack<Type>& Stack<Type>::operator=(Stack<Type>&& other) noexcept
 template<typename Type>
 inline Stack<Type>& Stack<Type>::operator=(const Stack<Type>& other)
 {
-	//TODO: переместить этот код в коструктор копирования.
 	if (this == &other) return *this;
 
 	bool empty = 
